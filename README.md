@@ -2,7 +2,7 @@
 
 An Op to simplify an opinionated GitLab workflow.
 
-![GitLab Op](./screens/gitlab.png)
+![GitLab Op](https://github.com/cto-ai/GitLab/blob/master/screens/gitlab.png)
 
 ## Requirements
 
