@@ -6,7 +6,7 @@ An Op to simplify an opinionated GitLab workflow.
 
 ## Requirements
 
-To run this or any other Op, install the [Ops Platform.](https://cto.ai/platform).
+To run this or any other Op, install the [Ops Platform](https://cto.ai/platform).
 
 Find information about how to run and build Ops via the [Ops Platform Documentation](https://cto.ai/docs/overview)
 
