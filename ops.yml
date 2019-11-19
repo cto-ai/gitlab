@@ -4,7 +4,7 @@ ops:
   - name: # Unique identifier for your op (required)
       gitlab
     public: true
-    sourceCodeURL: "https://git.cto.ai/platform-solutions/ops/gitlab"
+    sourceCodeURL: "https://github.com/cto-ai/GitLab"
     description: # Short description for what your op does (required)
       A workflow for gitlab
     run: # Command that is executed when op is started ("npm start", "./start_script.sh", etc.) (required)
@@ -37,10 +37,21 @@ ops:
     port: # Map ports for your op container
       - 3000:3000
     help: # Configure the output for when your op is run with `op --help` or `op -h`
-      usage: "Your first hello-world op"
+      usage: "ops run github [ARGUMENT]"
       arguments:
-        username: "Your username"
-        email: "Your email"
+        "project:create": "Initializes a new git repository in the current working directory and pushes to the user's selected Group or personal GitLab namespace."
+        "project:clone": "Clones a remote project that you are a member of on to your current working directory."
+        "issue:create": "Creates a new issue in GitLab. Current working directory must be a project either cloned or created using the project:create or project:clone commands."
+        "issue:list": "Lists all the issues the user has access to. If the current working directory is a project in GitLab then the issues are scope by the project otherwise it displays all issues that you are assigned to or created by you etc."
+        "issue:search": "Searches all issues in GitLab for your current working directory by selected filters."
+        "issue:start": "Lists all issues in GitLab for your current working directory. Selecting a issue will checkout a branch for that issue and set the upstream in GitLab."
+        "issue:save": "Adds all unstaged changes, commits and pushes to GitLab for the current working branch."
+        "issue:done": "Converts the current working issue into a merge-request and allows you to assign reviewers."
+        "pulls:list": "Lists all the open merge requests for a given project. The current working directory has to be a project."
+        "label:add": "Allows you to create a new project or group label."
+        "label:edit": "Allows you to edit an existing project or group label."
+        "label:remove": "Allows you to remove a project or group label."
+        "label:sync": "Allows you to sync up labels from one base project to any other project(s) that you have access to. The Op will check for any missing labels in the targeted project(s) and add in as necessary."
+        "token:update": "Allows you to update your GitLab access token."
       options:
-        build: "Build flag"
-        clear: "Clears"
+        help: "shows help content"

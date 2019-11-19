@@ -2,11 +2,11 @@
 
 An Op to simplify an opinionated GitLab workflow.
 
-![GitLab Op](./screens/gitlab.png)
+![GitLab Op](https://github.com/cto-ai/GitLab/blob/master/screens/gitlab.png?raw=true)
 
 ## Requirements
 
-To run this or any other Op, install the [Ops Platform.](https://cto.ai/platform).
+To run this or any other Op, install the [Ops Platform](https://cto.ai/platform).
 
 Find information about how to run and build Ops via the [Ops Platform Documentation](https://cto.ai/docs/overview)
 
