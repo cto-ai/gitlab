@@ -3,7 +3,7 @@ version: # Defines the used `ops.yml` schema version
 commands:
   - name: gitlab:1.0.0
     public: true
-    sourceCodeURL: "https://github.com/cto-ai/GitLab"
+    sourceCodeURL: "https://github.com/cto-ai/gitlab"
     description: # Short description for what your op does (required)
       A workflow for gitlab
     run: # Command that is executed when op is started ("npm start", "./start_script.sh", etc.) (required)
