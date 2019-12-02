@@ -22,14 +22,13 @@ export const handleError = async (
   labelName?: string,
   repoName?: string,
 ) => {
+  if (!err || !err.message) return
+
   await sdk.track(ERROR_TAGS, {
     event: `GitLab Op running ${command}`,
     error: err.message,
     user: await sdk.user(),
   })
-
-  if (!err || !err.message) return
-
   const errorMessage = err.message.toLowerCase()
   if (errorMessage.includes(NOT_GIT_REPO_ERROR_MSG)) {
     sdk.log(
