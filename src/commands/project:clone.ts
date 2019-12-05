@@ -12,14 +12,14 @@ export const projectClone = async options => {
   try {
     await setToken()
     const { username } = await getUser()
-    const { name, namespace, url } = await selectProject()
+    const { name, namespace, url, id } = await selectProject()
     const urlWithToken = await insertTokenInUrl(
       url,
       options.accessToken,
       username,
     )
     await cloneProject(urlWithToken)
-    await saveProjectToConfig(namespace, name, username)
+    await saveProjectToConfig(namespace, name, username, id)
     await handleSuccess('project:clone', { name })
   } catch (err) {
     await handleError(err, 'project:clone')

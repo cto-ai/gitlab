@@ -54,11 +54,13 @@ export const logProvideCmdMsg = async commands => {
  * @param namespace project namespace
  * @param name project name
  * @param username GitLab username
+ * @param id project id
  */
 export const saveProjectToConfig = async (
   namespace: string,
   name: string,
   username: string,
+  id: number,
 ): Promise<string> => {
   try {
     const oldRemoteRepos = (await getConfig('remoteRepos')) || []
@@ -70,6 +72,7 @@ export const saveProjectToConfig = async (
         namespace,
         repo: name,
         url,
+        id,
       },
     ]
     await setConfig('remoteRepos', remoteRepos)
@@ -164,7 +167,8 @@ export const checkCurrentProject = async (cmdOptions: CommandOptions) => {
       } else {
         const { namespace, repo } = filterForProjectInfo(originUrl)
         const { username } = await getUser()
-        const url = await saveProjectToConfig(namespace, repo, username)
+        const { id } = await getProject(`${namespace}/${repo}`)
+        const url = await saveProjectToConfig(namespace, repo, username, id)
         await pExec(`git remote set-url origin ${url}`)
         cmdOptions.currentRepo = { namespace, repo, url }
       }
@@ -210,10 +214,12 @@ export const formatProjectList = (projects: GitLabProjectRes[]): Project[] => {
     const {
       path,
       namespace: { full_path },
+      id,
     } = project
     return {
       name: path,
       namespace: full_path,
+      id,
     }
   })
 }

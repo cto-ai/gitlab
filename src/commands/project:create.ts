@@ -36,6 +36,7 @@ export const projectCreate = async ({ accessToken }) => {
       http_url_to_repo,
       path_with_namespace,
       namespace: { full_path },
+      id,
     } = await createProject(answers)
 
     // add labels to the repo
@@ -54,7 +55,7 @@ export const projectCreate = async ({ accessToken }) => {
     }
 
     // set config
-    saveProjectToConfig(full_path, name, username)
+    saveProjectToConfig(full_path, name, username, id)
     await fs.ensureDir(`${name}`)
 
     // copies select template files

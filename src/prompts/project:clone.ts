@@ -14,6 +14,7 @@ const formatList = async () => {
       http_url_to_repo,
       namespace: { full_path },
       path,
+      id,
     } = project
     if (isProjectCloned(full_path, path, remoteProjects)) {
       return {
@@ -22,6 +23,7 @@ const formatList = async () => {
           name: path,
           url: http_url_to_repo,
           namespace: full_path,
+          id,
         },
       }
     }
@@ -31,6 +33,7 @@ const formatList = async () => {
         name: path,
         url: http_url_to_repo,
         namespace: full_path,
+        id,
       },
     }
   })
