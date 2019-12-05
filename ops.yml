@@ -1,7 +1,7 @@
 version: # Defines the used `ops.yml` schema version
   "1"
 commands:
-  - name: gitlab:1.0.0
+  - name: gitlab:1.1.0
     public: true
     sourceCodeURL: "https://github.com/cto-ai/gitlab"
     description: # Short description for what your op does (required)

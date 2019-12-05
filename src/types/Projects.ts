@@ -2,6 +2,7 @@ export interface Project {
   name: string
   namespace: string
   url?: string
+  id: number
 }
 
 export interface RemoteProject {
