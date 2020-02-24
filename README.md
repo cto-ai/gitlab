@@ -1,4 +1,6 @@
-# 🚀 CTO.ai - Official Op - GitLab 🚀
+![](https://raw.githubusercontent.com/cto-ai/gitlab/master/assets/banner.png)
+
+# GitLab 🚀
 
 An Op to simplify an opinionated GitLab workflow.
 
