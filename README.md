@@ -1,10 +1,16 @@
-![](https://raw.githubusercontent.com/cto-ai/gitlab/master/assets/banner.png)
+![](https://cto.ai/static/oss-banner.png)
 
 # GitLab 🚀
 
 An Op to simplify an opinionated GitLab workflow.
 
 ![GitLab Op](https://github.com/cto-ai/GitLab/blob/master/screens/gitlab.png?raw=true)
+
+## Notice
+
+Please note that this Op was built with SDK 1 and therefore is currently limited to CLI compatibility.
+
+If you would like to interact with GitLab in Slack, please contact us in [our community](https://CTO.ai/community) and we can help you.
 
 ## Requirements
 
