@@ -10,7 +10,7 @@ An Op to simplify an opinionated GitLab workflow.
 
 Please note that this Op was built with SDK 1 and therefore is currently limited to CLI compatibility.
 
-If you would like to interact with GitLab in Slack, please contact us in [our community](https://CTO.ai/community) and we can work with you to adopt this functionality.
+If you would like to interact with GitLab in Slack, please contact us in [our community](https://CTO.ai/community) and we can help you.
 
 ## Requirements
 
